@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<script>
+// GitHub Pages clean URL trick
+// Redirect /pricing → /pricing/index.html or /pricing.html
+var path = window.location.pathname;
+var segs = path.replace(/^\//, '').replace(/\/$/, '').split('/');
+var repo = ''; // set this if repo is not root, e.g. 'swaksoft.github.io'
+// Try adding /index.html or .html
+var target = path.replace(/\/$/, '') + '.html';
+if (path.endsWith('/') || !path.includes('.')) {
+  window.location.replace(target);
+} else {
+  window.location.replace('/');
+}
+</script>
+</head>
+<body></body>
+</html>
