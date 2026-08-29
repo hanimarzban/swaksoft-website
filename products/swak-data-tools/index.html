@@ -3,9 +3,28 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>SwakSoft, SWAK Data Tools</title>
+<title>swaksoft.com – Swak Data Tools | 215 Excel Data Tools</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316A34A'/%3E%3Ctext x='16' y='23' font-family='Inter,system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E"/>
-<meta name="description" content="215 professional data tools built into Excel. Clean, filter, transform, analyze, and visualize data without leaving your spreadsheet."/>
+<meta name="description" content="Swak Data Tools — 215 professional data tools built into Excel. Clean, transform, analyze, visualize, and run ML models without leaving your spreadsheet. Free plan available."/>
+<meta name="keywords" content="Excel data tools, Excel add-in, data cleaning Excel, machine learning Excel, data analysis Excel, Excel automation, Swak Data Tools, SwakSoft, Excel AI, data transformation, statistics Excel, pivot Excel, Excel plugin"/>
+<meta name="author" content="SwakSoft"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://swaksoft.com/products/swak-data-tools"/>
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://swaksoft.com/products/swak-data-tools"/>
+<meta property="og:title" content="Swak Data Tools — 215 Excel Data Tools"/>
+<meta property="og:description" content="215 professional data tools built into Excel. Clean, transform, analyze, visualize, and run ML models — no Python, no macros, no setup."/>
+<meta property="og:image" content="https://swaksoft.com/assets/og-image.png"/>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Swak Data Tools — 215 Excel Data Tools"/>
+<meta name="twitter:description" content="215 professional data tools built into Excel. Free plan available."/>
+<meta name="twitter:image" content="https://swaksoft.com/assets/og-image.png"/>
+<!-- Structured Data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Swak Data Tools","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"215 professional data tools built into Microsoft Excel","url":"https://swaksoft.com/products/swak-data-tools","publisher":{"@type":"Organization","name":"SwakSoft","url":"https://swaksoft.com"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
@@ -573,14 +592,16 @@ section{padding:88px 0}
 .b-badge{background:var(--amber);color:#fff;font-size:9px;font-weight:800;padding:1px 6px;border-radius:50px}
 [data-theme="dark"] .b-badge{color:#0A0E1A}
 .plans-grid{max-width:1000px;margin:0 auto;display:grid;gap:12px}
-.plans-grid.ind{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.plans-grid.corp{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.plans-grid.ind{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}
+.plans-grid.corp{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:stretch}
 
 .plan-card{
+  display:flex;flex-direction:column;
   background:var(--bg2);border:1px solid var(--border);border-radius:16px;
   padding:24px;position:relative;box-shadow:var(--shadow);
   transition:transform .2s,border-color .2s,box-shadow .2s;
 }
+.plan-card .add-btn{ margin-top:auto; }
 .plan-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .plan-card.featured{border-color:rgba(22,163,74,.35);background:linear-gradient(160deg,var(--greenlt) 0%,var(--bg2) 40%)}
 [data-theme="dark"] .plan-card.featured{border-color:rgba(74,222,128,.3)}
@@ -596,9 +617,9 @@ section{padding:88px 0}
 .plan-price{font-size:2.2rem;font-weight:900;letter-spacing:-.05em;line-height:1;margin-bottom:2px}
 .plan-price sub{font-size:13px;font-weight:500;color:var(--text3);letter-spacing:0;vertical-align:middle}
 .plan-per{font-size:12px;color:var(--text3);margin-bottom:5px}
-.plan-save{font-size:11px;font-weight:700;color:var(--amber);min-height:15px;margin-bottom:12px}
-.plan-desc{font-size:12px;color:var(--text4);padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:14px}
-.plan-feats{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.plan-save{font-size:11px;font-weight:700;color:var(--amber);height:18px;margin-bottom:12px}
+.plan-desc{font-size:12px;color:var(--text4);padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:14px;min-height:36px}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px;flex:1}
 .plan-feats li{font-size:12px;color:var(--text2);display:flex;gap:7px;align-items:flex-start;line-height:1.4}
 .plan-feats li.y::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
 .plan-feats li.n{color:var(--text4)}
@@ -617,20 +638,44 @@ section{padding:88px 0}
 [data-theme="dark"] .add-btn.added{background:rgba(74,222,128,.1);border-color:rgba(74,222,128,.25)}
 
 /* ─── FAQ ─── */
-.faq-list{max-width:680px;margin:40px auto 0;display:flex;flex-direction:column;gap:6px}
-.faq-item{border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow)}
-details[open].faq-item{border-color:var(--border2)}
+.faq-list{
+  max-width:780px;margin:44px auto 0;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:12px;align-items:start;
+}
+.faq-item{
+  border-radius:14px;overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--bg2);
+  box-shadow:var(--shadow);
+  transition:box-shadow .2s,border-color .2s;
+}
+.faq-item:hover{box-shadow:var(--shadow-md);border-color:var(--border2)}
+details[open].faq-item{border-color:var(--green);box-shadow:0 0 0 2px rgba(22,163,74,.12),var(--shadow-md)}
+[data-theme="dark"] details[open].faq-item{border-color:var(--green);box-shadow:0 0 0 2px rgba(74,222,128,.12),var(--shadow-md)}
 .faq-q{
-  padding:15px 20px;font-size:.915rem;font-weight:600;color:var(--text);
+  padding:16px 18px;font-size:.88rem;font-weight:600;color:var(--text);
   display:flex;justify-content:space-between;align-items:center;
-  cursor:pointer;background:var(--bg2);transition:background .15s;
+  cursor:pointer;background:transparent;transition:background .15s;
   list-style:none;user-select:none;gap:12px;
 }
 .faq-q::-webkit-details-marker{display:none}
 .faq-q:hover{background:var(--bg3)}
-.faq-arr{color:var(--text3);font-size:20px;font-weight:300;line-height:1;transition:transform .2s;flex-shrink:0}
-details[open] .faq-arr{transform:rotate(45deg)}
-.faq-a{padding:13px 20px 15px;font-size:.875rem;color:var(--text3);line-height:1.75;background:var(--bg3);border-top:1px solid var(--border)}
+.faq-arr{
+  width:22px;height:22px;border-radius:50%;border:1.5px solid var(--border2);
+  color:var(--text3);font-size:14px;font-weight:400;line-height:20px;
+  text-align:center;transition:transform .2s,background .2s,border-color .2s,color .2s;
+  flex-shrink:0;
+}
+details[open] .faq-arr{transform:rotate(45deg);background:var(--green);border-color:var(--green);color:#fff}
+[data-theme="dark"] details[open] .faq-arr{color:#0A0E1A}
+.faq-a{
+  padding:0 18px 16px;font-size:.845rem;color:var(--text3);line-height:1.75;
+  border-top:1px solid var(--border);
+  background:var(--bg3);
+  padding-top:13px;
+}
+@media(max-width:700px){.faq-list{grid-template-columns:1fr}}
 
 /* ─── CTA ─── */
 .cta-sec{text-align:center;border-top:1px solid var(--border)}
@@ -740,15 +785,18 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
   overflow:hidden;
 }
 .ba-col-header{
-  padding:14px 20px;
+  padding:16px 20px;
   border-bottom:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
 }
 .ba-col-badge{
-  font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:50px;
+  font-size:1.05rem;font-weight:800;padding:5px 18px;border-radius:50px;
+  color:#fff;letter-spacing:.02em;
 }
-.ba-col-badge.before{background:rgba(248,113,113,.1);color:var(--red)}
-.ba-col-badge.after{background:rgba(74,222,128,.1);color:var(--green)}
-[data-theme="light"] .ba-col-badge.after{background:rgba(22,163,74,.1);color:var(--green)}
+.ba-col-badge.before{background:rgba(239,68,68,.75)}
+.ba-col-badge.after{background:rgba(34,197,94,.75)}
+[data-theme="light"] .ba-col-badge.before{background:rgba(220,38,38,.7)}
+[data-theme="light"] .ba-col-badge.after{background:rgba(22,163,74,.7)}
 .ba-task{
   padding:16px 20px;border-bottom:1px solid var(--border);
 }
@@ -782,9 +830,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 
 /* ── SYSTEM REQUIREMENTS ── */
 .sysreq-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  display:grid;grid-template-columns:repeat(2,1fr);
   gap:14px;margin-top:40px;
 }
+@media(max-width:640px){.sysreq-grid{grid-template-columns:1fr}}
 .sysreq-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:14px;
   padding:22px;box-shadow:var(--shadow);
@@ -909,9 +958,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
   <div class="nav-inner">
     <a href="/" class="nav-logo">
       <div class="nav-mark">S</div>
-      <span class="nav-brand">SwakSoft</span>
+      <span class="nav-brand">Swak Soft</span>
     </a>
-    <div class="nav-links">
       <a href="/">Home</a>
       <div class="nav-dropdown" id="dd-products" onmouseenter="ddOpen(this)" onmouseleave="ddClose(this)">
         <button class="nav-drop-btn">Products</button>
@@ -928,7 +976,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
             <div class="nav-submenu">
               <a href="/products/swak-data-tools" class="drop-item">
                 <div>
-                  <div class="drop-item-name">SWAK Data Tools</div>
+                  <div class="drop-item-name">Swak Data Tools</div>
                   <div class="drop-item-sub">215 professional data tools</div>
                 </div>
               </a>
@@ -1040,7 +1088,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 <!-- FEATURES -->
 <section id="features" style="background:var(--bg3)">
   <div class="container">
-    <div class="sec-eye">Why SwakSoft</div>
+    <div class="sec-eye">Why Swak Data Tools</div>
     <h2 class="sec-h2">Professional power. Zero setup.</h2>
     <div class="feature-block">
 
@@ -1049,7 +1097,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="feat-text">
           <div class="feat-eye" style="color:var(--green)">Data Cleaning, 24 Tools</div>
           <div class="feat-h3">Fix messy data in seconds</div>
-          <p class="feat-desc">SWAK runs directly on your selected range and shows a preview before changing anything. No macros, no Python. Just click and clean.</p>
+          <p class="feat-desc">Swak Data Tools runs directly on your selected range and shows a preview before changing anything. No macros, no Python. Just click and clean.</p>
           <ul class="feat-ul">
             <li>Remove duplicates, fill missing values, fix encoding errors</li>
             <li>Validate emails, phone numbers, and URLs across columns</li>
@@ -1120,7 +1168,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="feat-text">
           <div class="feat-eye" style="color:var(--pink)">AI Insights, 18 Tools</div>
           <div class="feat-h3">Ask about your data in your own language</div>
-          <p class="feat-desc">SWAK supports 9 languages. Ask questions in Persian, Arabic, Chinese, Russian, Hindi, German, French, Spanish, or English, and get answers in the same language.</p>
+          <p class="feat-desc">Swak Data Tools supports 9 languages. Ask questions in Persian, Arabic, Chinese, Russian, Hindi, German, French, Spanish, or English, and get answers in the same language.</p>
           <ul class="feat-ul">
             <li>Explain Data: plain-language description of any selection</li>
             <li>Detect Patterns: finds trends and seasonality automatically</li>
@@ -1132,13 +1180,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
           <div style="font-size:10px;color:var(--text4);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px">AI Insights, 9 Languages</div>
           <div class="ai-chat-wrap">
             <div class="chat-msg user"><div class="chat-lang">English</div>Which column has the most outliers?</div>
-            <div class="chat-msg ai"><div class="chat-ai-lbl">SWAK AI</div>Column B (Revenue) has 7 outliers detected via IQR method. All exceed $420,000, 3.2× above the mean. Suggested action: review with <b style="color:var(--green)">Anomaly Detection</b> tool.</div>
+            <div class="chat-msg ai"><div class="chat-ai-lbl">Swak AI</div>Column B (Revenue) has 7 outliers detected via IQR method. All exceed $420,000, 3.2× above the mean. Suggested action: review with <b style="color:var(--green)">Anomaly Detection</b> tool.</div>
             <div class="chat-msg user" style="direction:rtl;text-align:right"><div class="chat-lang">فارسی</div>چرا ردیف ۴۷ اینقدر متفاوته؟</div>
-            <div class="chat-msg ai"><div class="chat-ai-lbl">SWAK AI</div>ردیف ۴۷ مقدار درآمد $487,200 دارد، ۳.۴ برابر میانگین. احتمالاً یک معامله بزرگ یک‌بار یا احتمالاً خطای ورود داده است.</div>
+            <div class="chat-msg ai"><div class="chat-ai-lbl">Swak AI</div>ردیف ۴۷ مقدار درآمد $487,200 دارد، ۳.۴ برابر میانگین. احتمالاً یک معامله بزرگ یک‌بار یا احتمالاً خطای ورود داده است.</div>
             <div class="chat-msg user"><div class="chat-lang">中文</div>这组数据有什么规律？</div>
-            <div class="chat-msg ai"><div class="chat-ai-lbl">SWAK AI</div>发现3个显著规律：收入在周五出现峰值（+23%）、电子产品类别呈指数增长、存在两个明显客户群体。</div>
+            <div class="chat-msg ai"><div class="chat-ai-lbl">Swak AI</div>发现3个显著规律：收入在周五出现峰值（+23%）、电子产品类别呈指数增长、存在两个明显客户群体。</div>
             <div class="chat-msg user" style="direction:rtl;text-align:right"><div class="chat-lang">العربية</div>ما سبب وجود قيم فارغة في العمود C؟</div>
-            <div class="chat-msg ai"><div class="chat-ai-lbl">SWAK AI</div>العمود C يحتوي على 12 قيمة فارغة (8.4%). يُنصح باستخدام أداة "ملء القيم المفقودة" مع خيار التعبئة الأمامية.</div>
+            <div class="chat-msg ai"><div class="chat-ai-lbl">Swak AI</div>العمود C يحتوي على 12 قيمة فارغة (8.4%). يُنصح باستخدام أداة "ملء القيم المفقودة" مع خيار التعبئة الأمامية.</div>
           </div>
         </div>
       </div>
@@ -1151,12 +1199,12 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 <section id="before-after" style="padding:88px 0">
   <div class="container">
     <div class="sec-eye">Time savings</div>
-    <h2 class="sec-h2">Before SWAK vs After SWAK</h2>
+    <h2 class="sec-h2">See the difference</h2>
     <p class="sec-sub">Real tasks. Real time comparisons.</p>
     <div class="ba-compare-grid">
       <div class="ba-col ba-before">
         <div class="ba-col-header">
-          <span class="ba-col-badge before">Before SWAK</span>
+          <span class="ba-col-badge before">Before</span>
         </div>
         <div class="ba-task">
           <div class="ba-task-name">Clean 10,000 rows</div>
@@ -1181,7 +1229,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
       </div>
       <div class="ba-col ba-after">
         <div class="ba-col-header">
-          <span class="ba-col-badge after">After SWAK</span>
+          <span class="ba-col-badge after">After</span>
         </div>
         <div class="ba-task">
           <div class="ba-task-name">Clean 10,000 rows</div>
@@ -1211,15 +1259,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 <!-- COMPARISON VS ALTERNATIVES -->
 <section id="comparison" style="background:var(--bg3);padding:88px 0">
   <div class="container">
-    <div class="sec-eye">Why SWAK</div>
-    <h2 class="sec-h2">SWAK vs the alternatives</h2>
+    <div class="sec-eye">Why Swak Data Tools</div>
+    <h2 class="sec-h2">Swak Data Tools vs the alternatives</h2>
     <p class="sec-sub">Why not just use Python, Power Query, or another add-in?</p>
     <div class="comp-table-wrap">
       <table class="comp-table">
         <thead>
           <tr>
             <th>Feature</th>
-            <th class="comp-swak">SWAK Data Tools</th>
+            <th class="comp-swak">Swak Data Tools</th>
             <th>Python / R</th>
             <th>Power Query</th>
             <th>Other Add-ins</th>
@@ -1293,7 +1341,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
   <div class="container">
     <div class="sec-eye">Compatibility</div>
     <h2 class="sec-h2">System requirements</h2>
-    <p class="sec-sub">SWAK Data Tools works on most modern Windows and Mac systems.</p>
+    <p class="sec-sub">Works on Windows, Mac, and Excel on the Web.</p>
     <div class="sysreq-grid">
       <div class="sysreq-card">
         <div class="sysreq-icon">
@@ -1330,6 +1378,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
           <li>4 GB RAM minimum, 8 GB recommended</li>
           <li>500 MB free disk space</li>
           <li>Apple Silicon (M1/M2/M3) native support</li>
+          <li>Intel Mac fully supported</li>
         </ul>
       </div>
       <div class="sysreq-card">
@@ -1338,8 +1387,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         </div>
         <div class="sysreq-title">Installation</div>
         <ul class="sysreq-list">
-          <li>Install via manifest file (no Store needed)</li>
-          <li>Download SWAK Runtime from swaksoft.com</li>
+          <li>Install directly from Microsoft AppSource (recommended for Windows, Mac, and Microsoft 365).</li>
+          <li>For Microsoft 365 China (21Vianet) and Chinese Office editions, install via the manifest file included in the setup package from this page.</li>
+          <li>Download Swak Runtime from swaksoft.com</li>
           <li>No admin rights required</li>
           <li>Install time: under 2 minutes</li>
         </ul>
@@ -1381,11 +1431,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-desc">23 essential tools, no account required</div>
         <ul class="plan-feats">
           <li class="y">23 tools unlocked permanently</li>
-          <li class="y">Data Cleaning basics</li>
-          <li class="y">Sort, Filter, Pivot, Transpose</li>
+          <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
+          <li class="y">9 UI languages</li>
+          <li class="y">Standard support</li>
+          <li class="n">All 215 tools</li>
           <li class="n">ML Suite, 37 models</li>
           <li class="n">Statistics Suite, 25 tools</li>
           <li class="n">AI Insights, 18 tools</li>
+          <li class="n">One-time 875,000 welcome AI tokens</li>
         </ul>
         <a href="/download" class="add-btn sec">Download Free</a>
       </div>
@@ -1398,11 +1451,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-desc">All 215 tools · 1 user · 1 device</div>
         <ul class="plan-feats">
           <li class="y">All 215 tools unlocked</li>
+          <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
+          <li class="y">9 UI languages</li>
+          <li class="y">Standard support</li>
           <li class="y">ML Suite, 37 models</li>
           <li class="y">Statistics Suite, 25 tools</li>
           <li class="y">AI Insights, 18 tools</li>
-          <li class="y">9 languages</li>
-          <li class="y">Priority support</li>
+          <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens</span></li>
         </ul>
         <button class="add-btn prim" id="btn-pro" onclick="addToCart('pro')">Add to Cart</button>
       </div>
@@ -1418,8 +1473,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-desc">Up to 5 users, each on their own device</div>
         <ul class="plan-feats">
           <li class="y">All 215 tools per seat</li>
-          <li class="y">Centralized license management</li>
-          <li class="y">Priority support</li>
+          <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
+          <li class="y">9 UI languages</li>
+          <li class="y">Standard support</li>
+          <li class="y">ML Suite, 37 models</li>
+          <li class="y">Statistics Suite, 25 tools</li>
+          <li class="y">AI Insights, 18 tools</li>
+          <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens/seat</span></li>
         </ul>
         <button class="add-btn sec" id="btn-team" onclick="addToCart('team')">Add to Cart</button>
       </div>
@@ -1432,8 +1492,13 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-desc">For data teams up to 10 users</div>
         <ul class="plan-feats">
           <li class="y">All 215 tools per seat</li>
-          <li class="y">Admin dashboard</li>
-          <li class="y">Priority support + onboarding</li>
+          <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
+          <li class="y">9 UI languages</li>
+          <li class="y">Standard support</li>
+          <li class="y">ML Suite, 37 models</li>
+          <li class="y">Statistics Suite, 25 tools</li>
+          <li class="y">AI Insights, 18 tools</li>
+          <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens/seat</span></li>
         </ul>
         <button class="add-btn prim" style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff" id="btn-biz" onclick="addToCart('biz')">Add to Cart</button>
       </div>
@@ -1444,15 +1509,20 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-save" id="ent-save">&nbsp;</div>
         <div class="plan-desc">Large teams and organizations</div>
         <ul class="plan-feats">
-          <li class="y">Unlimited devices per seat</li>
-          <li class="y">Volume discounts available</li>
-          <li class="y">Dedicated support + SLA</li>
+          <li class="y">All 215 tools per seat</li>
+          <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
+          <li class="y">9 UI languages</li>
+          <li class="y">Standard support</li>
+          <li class="y">ML Suite, 37 models</li>
+          <li class="y">Statistics Suite, 25 tools</li>
+          <li class="y">AI Insights, 18 tools</li>
+          <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens/seat</span></li>
         </ul>
         <button class="add-btn sec" id="btn-ent" onclick="addToCart('ent')">Add to Cart</button>
       </div>
     </div>
 
-    <p style="text-align:center;margin-top:18px;font-size:12px;color:var(--text4)">
+    <p style="text-align:center;margin-top:18px;font-size:12px;color:var(--text3)">
       All plans are one-time purchases for the selected period. No automatic renewal.
     </p>
   </div>
@@ -1464,24 +1534,28 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
     <h2 class="sec-h2">Common questions</h2>
     <div class="faq-list">
       <details class="faq-item">
-        <summary class="faq-q">Does SWAK work on Mac?<span class="faq-arr">+</span></summary>
-        <div class="faq-a">Yes. SWAK works on Excel for Windows (2016+) and Excel for Mac (2019+), as well as Microsoft 365 on both platforms. A Microsoft 365 subscription is not required.</div>
+        <summary class="faq-q">Does Swak Data Tools work on Mac?<span class="faq-arr">+</span></summary>
+        <div class="faq-a">Yes. Swak Data Tools works on Excel for Windows (2016+) and Excel for Mac (2019+), as well as Microsoft 365 on both platforms. A Microsoft 365 subscription is not required.</div>
       </details>
       <details class="faq-item">
-        <summary class="faq-q">Does SWAK work with Chinese Office (国内版 Office)?<span class="faq-arr">+</span></summary>
-        <div class="faq-a">Yes. SWAK Data Tools is fully compatible with Chinese editions of Microsoft Office and Microsoft 365. Installation uses a direct manifest file, no Microsoft Store access required. Simply download the setup file from this page and follow the installation steps. The full UI is available in Chinese (中文). <a href="/download#china" style="color:var(--green);font-weight:600">See installation guide for China</a></div>
+        <summary class="faq-q">Does Swak Data Tools work with Chinese Office (国内版 Office)?<span class="faq-arr">+</span></summary>
+        <div class="faq-a">Yes. Swak Data Tools is fully compatible with Chinese editions of Microsoft Office and Microsoft 365. Installation uses a direct manifest file, no Microsoft Store access required. Simply download the setup file from this page and follow the installation steps. The full UI is available in Chinese (中文). <a href="/download#china" style="color:var(--green);font-weight:600">See installation guide for China</a></div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">Does my data leave my computer?<span class="faq-arr">+</span></summary>
         <div class="faq-a">Almost never. All 215 tools, including all ML models and Statistics tools, run entirely on your local machine. The only exception is the 18 AI Insights tools, which send only the selected cell range to the AI model to generate a response.</div>
       </details>
       <details class="faq-item">
-        <summary class="faq-q">Can I use SWAK in my own language?<span class="faq-arr">+</span></summary>
-        <div class="faq-a">Yes. SWAK supports 9 languages: English, Persian (فارسی), Arabic (العربية), French, Spanish, German, Chinese (中文), Russian (Русский), and Hindi (हिंदी). The entire UI and all AI Insights responses adapt to your selected language.</div>
+        <summary class="faq-q">Can I use Swak Data Tools in my own language?<span class="faq-arr">+</span></summary>
+        <div class="faq-a">Yes. Swak Data Tools supports 9 languages: English, Persian (فارسی), Arabic (العربية), French, Spanish, German, Chinese (中文), Russian (Русский), and Hindi (हिंदी). The entire UI and all AI Insights responses adapt to your selected language.</div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">How does billing work?<span class="faq-arr">+</span></summary>
         <div class="faq-a">All plans are one-time purchases for the chosen period (1 month, 3 months, or 6 months). There is no automatic renewal or recurring charge. When your license period ends, your tools revert to the free tier and you can choose to renew manually.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What is the welcome AI credit?<span class="faq-arr">+</span></summary>
+        <div class="faq-a">Every new license — including the free plan — receives a one-time welcome credit of <strong>875,000 AI tokens</strong>, powered by Claude AI. This is not a monthly allowance; it is a single credit that lets you explore all 18 AI Insights tools before spending anything. Once used, you can top up your token balance anytime from the <a href="/license" style="color:var(--green);font-weight:600">license portal</a> at swaksoft.com/license.</div>
       </details>
       <details class="faq-item">
         <summary class="faq-q">Which 23 tools are free?<span class="faq-arr">+</span></summary>
@@ -1516,7 +1590,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
     <div class="footer-brand">
       <a href="/" class="nav-logo">
         <div class="nav-mark">S</div>
-        <span class="nav-brand">SwakSoft</span>
+        <span class="nav-brand">Swak Soft</span>
       </a>
       <p class="footer-desc">215 professional data tools built directly into Microsoft Excel. No coding required.</p>
       <div class="footer-social">
@@ -1554,7 +1628,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2026 SwakSoft. All rights reserved.</div>
+    <div class="footer-copy">© 2026 Swak Soft Team. All rights reserved.</div>
     
   </div>
 </footer>
@@ -1781,7 +1855,7 @@ function renderCart(){
     el.className = 'cart-item';
     el.innerHTML =
       '<div class="ci-info">' +
-        '<div class="ci-name">SWAK ' + meta.name + '</div>' +
+        '<div class="ci-name">Swak Data Tools — ' + meta.name + '</div>' +
         '<div class="ci-sub">' + PERIOD_LABEL[period] + ' &nbsp;&middot;&nbsp; ' + fmt(d.p) + '/mo</div>' +
         '<div class="ci-qty-row">' +
           '<button class="qty-btn" onclick="changeQty(\'' + key + '\',-1)">-</button>' +
@@ -1847,7 +1921,7 @@ function sdClose(el){ el.classList.remove('open'); }
     'Thousands of rows every day?',
     'Want AI insights inside Excel?',
     'Need to visualize data fast?',
-    'SWAK Data Tools is for you.'
+    'Swak Data Tools is for you.'
   ];
   var el = document.getElementById('cycle-text');
   if(!el) return;
