@@ -591,17 +591,18 @@ section{padding:88px 0}
 .b-btn.active{background:var(--bg2);color:var(--text);border-color:var(--border2);box-shadow:var(--shadow)}
 .b-badge{background:var(--amber);color:#fff;font-size:9px;font-weight:800;padding:1px 6px;border-radius:50px}
 [data-theme="dark"] .b-badge{color:#0A0E1A}
-.plans-grid{max-width:1000px;margin:0 auto;display:grid;gap:12px}
-.plans-grid.ind{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));align-items:stretch}
-.plans-grid.corp{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));align-items:stretch}
+.plans-grid{max-width:1000px;margin:0 auto;display:grid;gap:12px;align-items:stretch}
+.plans-grid.ind{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.plans-grid.corp{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 
 .plan-card{
   display:flex;flex-direction:column;
   background:var(--bg2);border:1px solid var(--border);border-radius:16px;
   padding:24px;position:relative;box-shadow:var(--shadow);
   transition:transform .2s,border-color .2s,box-shadow .2s;
+  height:100%;box-sizing:border-box;
 }
-.plan-card .add-btn{ margin-top:auto; }
+.plan-card .add-btn{ margin-top:auto;flex-shrink:0; }
 .plan-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .plan-card.featured{border-color:rgba(22,163,74,.35);background:linear-gradient(160deg,var(--greenlt) 0%,var(--bg2) 40%)}
 [data-theme="dark"] .plan-card.featured{border-color:rgba(74,222,128,.3)}
@@ -614,12 +615,12 @@ section{padding:88px 0}
 }
 [data-theme="dark"] .plan-badge{color:#0A0E1A}
 .plan-name{font-size:12.5px;font-weight:700;color:var(--text3);margin-bottom:5px}
-.plan-price{font-size:2.2rem;font-weight:900;letter-spacing:-.05em;line-height:1;margin-bottom:2px}
+.plan-price{font-size:2.2rem;font-weight:900;letter-spacing:-.05em;line-height:1;margin-bottom:2px;min-height:2.4rem}
 .plan-price sub{font-size:13px;font-weight:500;color:var(--text3);letter-spacing:0;vertical-align:middle}
-.plan-per{font-size:12px;color:var(--text3);margin-bottom:5px}
+.plan-per{font-size:12px;color:var(--text3);margin-bottom:5px;min-height:16px}
 .plan-save{font-size:11px;font-weight:700;color:var(--amber);height:18px;margin-bottom:12px}
-.plan-desc{font-size:12px;color:var(--text4);padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:14px;min-height:36px}
-.plan-feats{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px;flex:1}
+.plan-desc{font-size:12px;color:var(--text4);padding-bottom:14px;border-bottom:1px solid var(--border);margin-bottom:14px;height:36px;display:flex;align-items:center}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
 .plan-feats li{font-size:12px;color:var(--text2);display:flex;gap:7px;align-items:flex-start;line-height:1.4}
 .plan-feats li.y::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
 .plan-feats li.n{color:var(--text4)}
@@ -628,6 +629,7 @@ section{padding:88px 0}
   display:block;width:100%;padding:11px;text-align:center;
   font-size:13px;font-weight:700;border-radius:9px;cursor:pointer;
   font-family:inherit;border:none;transition:all .15s;
+  box-sizing:border-box;line-height:1.4;text-decoration:none;
 }
 .add-btn.prim{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;box-shadow:0 2px 12px rgba(22,163,74,.2)}
 [data-theme="dark"] .add-btn.prim{color:#0A0E1A}
@@ -960,6 +962,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
       <div class="nav-mark">S</div>
       <span class="nav-brand">Swak Soft</span>
     </a>
+    <div class="nav-links">
       <a href="/">Home</a>
       <div class="nav-dropdown" id="dd-products" onmouseenter="ddOpen(this)" onmouseleave="ddClose(this)">
         <button class="nav-drop-btn">Products</button>
@@ -1430,17 +1433,16 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-save">&nbsp;</div>
         <div class="plan-desc">23 essential tools, no account required</div>
         <ul class="plan-feats">
-          <li class="y">23 tools unlocked permanently</li>
+          <li class="n">All 215 tools (23 free forever)</li>
           <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
           <li class="y">9 UI languages</li>
           <li class="y">Standard support</li>
-          <li class="n">All 215 tools</li>
           <li class="n">ML Suite, 37 models</li>
           <li class="n">Statistics Suite, 25 tools</li>
           <li class="n">AI Insights, 18 tools</li>
           <li class="n">One-time 875,000 welcome AI tokens</li>
         </ul>
-        <a href="/download" class="add-btn sec">Download Free</a>
+        <a href="/download" class="add-btn sec" style="margin-top:2px">Download Free</a>
       </div>
       <div class="plan-card featured" data-pid="pro">
         <div class="plan-badge">POPULAR</div>
@@ -1459,7 +1461,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
           <li class="y">AI Insights, 18 tools</li>
           <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens</span></li>
         </ul>
-        <button class="add-btn prim" id="btn-pro" onclick="addToCart('pro')">Add to Cart</button>
+        <button class="add-btn prim" id="btn-pro" onclick="addToCart('pro')" style="margin-top:2px">Add to Cart</button>
       </div>
     </div>
 
@@ -1481,7 +1483,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
           <li class="y">AI Insights, 18 tools</li>
           <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens/seat</span></li>
         </ul>
-        <button class="add-btn sec" id="btn-team" onclick="addToCart('team')">Add to Cart</button>
+        <button class="add-btn prim" id="btn-team" onclick="addToCart('team')">Add to Cart</button>
       </div>
       <div class="plan-card featured" data-pid="biz" style="border-color:rgba(245,158,11,.35);background:linear-gradient(160deg,rgba(245,158,11,.05) 0%,var(--bg2) 40%)">
         <div class="plan-badge" style="background:linear-gradient(135deg,#F59E0B,#D97706)">BEST VALUE</div>
@@ -1500,7 +1502,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
           <li class="y">AI Insights, 18 tools</li>
           <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens/seat</span></li>
         </ul>
-        <button class="add-btn prim" style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff" id="btn-biz" onclick="addToCart('biz')">Add to Cart</button>
+        <button class="add-btn prim" style="background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;margin-top:1px" id="btn-biz" onclick="addToCart('biz')">Add to Cart</button>
       </div>
       <div class="plan-card" data-pid="ent">
         <div class="plan-name">Enterprise</div>
@@ -1518,7 +1520,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
           <li class="y">AI Insights, 18 tools</li>
           <li class="y"><span style="color:var(--green);font-weight:600">One-time 875,000 welcome AI tokens/seat</span></li>
         </ul>
-        <button class="add-btn sec" id="btn-ent" onclick="addToCart('ent')">Add to Cart</button>
+        <button class="add-btn prim" id="btn-ent" onclick="addToCart('ent')">Add to Cart</button>
       </div>
     </div>
 
@@ -1590,7 +1592,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
     <div class="footer-brand">
       <a href="/" class="nav-logo">
         <div class="nav-mark">S</div>
-        <span class="nav-brand">Swak Soft</span>
+        <span class="nav-brand">Swak Soft Team</span>
       </a>
       <p class="footer-desc">215 professional data tools built directly into Microsoft Excel. No coding required.</p>
       <div class="footer-social">
@@ -1637,22 +1639,46 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 /* ── AI CONFIG ── */
 var SWAK_AI_ENDPOINT = 'https://api.swaksoft.com/ai'; // proxy endpoint
 /* ── THEME ── */
-var savedTheme = localStorage.getItem('swak-theme');
-if(!savedTheme){
+// ── Theme system — auto by hour + manual override ──────────────────────────
+var THEME_KEY  = 'swak-theme';
+var MANUAL_KEY = 'swak-theme-manual'; // set only when user clicks toggle
+
+function _themeForHour(){
   var hr = new Date().getHours();
-  savedTheme = (hr >= 7 && hr < 19) ? 'light' : 'dark';
+  return (hr >= 7 && hr < 19) ? 'light' : 'dark';
 }
-document.documentElement.setAttribute('data-theme', savedTheme);
-function updateThemeBtn(){
-  document.getElementById('theme-btn').textContent = document.documentElement.getAttribute('data-theme')==='dark' ? '☀️' : '🌙';
-}
-updateThemeBtn();
-function toggleTheme(){
-  const t = document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+
+function _applyTheme(t){
   document.documentElement.setAttribute('data-theme', t);
-  localStorage.setItem('swak-theme', t);
-  updateThemeBtn();
+  var btn = document.getElementById('theme-btn');
+  if(btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
 }
+
+// Init: use manual override if set, otherwise use hour
+var _isManual = localStorage.getItem(MANUAL_KEY) === '1';
+var _initTheme = _isManual
+  ? (localStorage.getItem(THEME_KEY) || _themeForHour())
+  : _themeForHour();
+_applyTheme(_initTheme);
+
+function updateThemeBtn(){
+  var btn = document.getElementById('theme-btn');
+  if(btn) btn.textContent = document.documentElement.getAttribute('data-theme')==='dark' ? '☀️' : '🌙';
+}
+
+function toggleTheme(){
+  var t = document.documentElement.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+  _applyTheme(t);
+  localStorage.setItem(THEME_KEY, t);
+  localStorage.setItem(MANUAL_KEY, '1'); // mark as manual
+  _isManual = true;
+}
+
+// Scheduler: every 60s — if not manual, auto-switch by hour
+setInterval(function(){
+  if(_isManual) return;
+  _applyTheme(_themeForHour());
+}, 60000);
 
 /* ── LOADER ── */
 window.addEventListener('load', () => {
