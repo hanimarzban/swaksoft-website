@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>swaksoft.com – Swak Data Tools | 215 Excel Data Tools</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316A34A'/%3E%3Ctext x='16' y='23' font-family='Inter,system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316A34A'/%3E%3Ctext x='16' y='23' font-family=''DM Sans',system-ui,sans-serif' font-size='20' font-weight='900' text-anchor='middle' fill='white'%3ES%3C/text%3E%3C/svg%3E"/>
 <meta name="description" content="Swak Data Tools — 215 professional data tools built into Excel. Clean, transform, analyze, visualize, and run ML models without leaving your spreadsheet. Free plan available."/>
 <meta name="keywords" content="Excel data tools, Excel add-in, data cleaning Excel, machine learning Excel, data analysis Excel, Excel automation, Swak Data Tools, SwakSoft, Excel AI, data transformation, statistics Excel, pivot Excel, Excel plugin"/>
 <meta name="author" content="SwakSoft"/>
@@ -26,7 +26,7 @@
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Swak Data Tools","applicationCategory":"BusinessApplication","operatingSystem":"Windows, macOS","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"215 professional data tools built into Microsoft Excel","url":"https://swaksoft.com/products/swak-data-tools","publisher":{"@type":"Organization","name":"SwakSoft","url":"https://swaksoft.com"}}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet"/>
 <style>
 /* ─── THEME TOKENS ─── */
 :root{
@@ -55,10 +55,11 @@
 
 /* ─── RESET ─── */
 *{margin:0;padding:0;box-sizing:border-box}
+a{text-decoration:none;color:inherit}
 html{scroll-behavior:smooth}
 body{
   background:var(--bg);color:var(--text);
-  font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;
+  font-family:'DM Sans',system-ui,sans-serif;font-size:16px;line-height:1.6;
   -webkit-font-smoothing:antialiased;overflow-x:hidden;
   transition:background .25s,color .25s;
 }
@@ -256,7 +257,7 @@ nav.scrolled{background:rgba(var(--bg-rgb,248,249,251),.92);border-color:var(--b
 }
 [data-theme="dark"] .nav-mark{box-shadow:0 2px 8px rgba(74,222,128,.25)}
 .nav-brand{font-size:16px;font-weight:800;color:var(--text);letter-spacing:-.02em}
-.nav-links{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nav-links{display:flex;align-items:center;gap:4px;flex:1}
 .nav-links a{
   color:var(--text3);font-size:13.5px;font-weight:500;text-decoration:none;
   padding:6px 13px;border-radius:8px;transition:color .15s,background .15s;white-space:nowrap;
@@ -312,7 +313,7 @@ nav.scrolled{background:rgba(var(--bg-rgb,248,249,251),.92);border-color:var(--b
 }
 .nav-drop-menu a:hover{background:var(--bg3);color:var(--text)}
 .nav-drop-all{border-top:1px solid var(--border);margin-top:4px;padding-top:10px !important;font-size:12px !important;color:var(--text3) !important}
-.nav-actions{display:flex;align-items:center;gap:7px;flex-shrink:0}
+.nav-actions{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:auto}
 .theme-btn{
   width:34px;height:34px;border-radius:8px;border:1px solid var(--border);
   background:var(--bg3);cursor:pointer;display:flex;align-items:center;justify-content:center;
@@ -732,7 +733,6 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
   .stat-item:nth-child(2){border-right:none}
   .stat-item:nth-child(3){border-top:1px solid var(--border);border-right:1px solid var(--border)}
   .stat-item:nth-child(4){border-top:1px solid var(--border);border-right:none}
-  .nav-links{display:none}
   .footer-main{grid-template-columns:1fr}
   .footer-bottom{flex-direction:column;align-items:flex-start}
 }
@@ -832,9 +832,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 
 /* ── SYSTEM REQUIREMENTS ── */
 .sysreq-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);
+  display:grid;grid-template-columns:repeat(3,1fr);
   gap:14px;margin-top:40px;
 }
+@media(max-width:900px){.sysreq-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.sysreq-grid{grid-template-columns:1fr}}
 .sysreq-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:14px;
@@ -914,6 +915,72 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
 }
 [data-theme="dark"] .ss-msg.ai{background:rgba(74,222,128,.07);border-color:rgba(74,222,128,.15)}
 .screenshot-label{font-size:12.5px;font-weight:600;color:var(--text3);text-align:center}
+
+/* ─── HAMBURGER / MOBILE NAV ─── */
+.hamburger{
+  display:none;width:36px;height:36px;border-radius:8px;
+  border:1px solid var(--border2);background:var(--bg2);
+  cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  flex-shrink:0;
+}
+.hamburger span{
+  display:block;width:16px;height:1.5px;background:var(--text2);border-radius:2px;
+  transition:transform .25s,opacity .25s,width .25s;transform-origin:center;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;width:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.mobile-nav{
+  position:fixed;top:60px;left:0;right:0;bottom:0;z-index:99;
+  background:var(--bg);overflow-y:auto;
+  transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);
+  padding:16px 20px 40px;display:flex;flex-direction:column;gap:4px;
+}
+.mobile-nav.open{transform:translateX(0)}
+
+.mob-link{
+  display:block;padding:13px 14px;border-radius:10px;
+  font-family:'DM Sans',system-ui,sans-serif;font-size:15px;font-weight:500;
+  color:var(--text2);transition:background .15s,color .15s;
+}
+.mob-link:hover,.mob-link.active{background:var(--bg3);color:var(--text)}
+.mob-divider{height:1px;background:var(--border);margin:8px 0}
+.mob-section{
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--text4);padding:10px 14px 4px;
+}
+.mob-product{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 14px;border-radius:10px;border:1px solid var(--border);
+  margin:4px 0;background:var(--bg2);transition:border-color .15s;
+}
+.mob-product:hover{border-color:var(--border2)}
+.mob-product-name{font-family:'DM Sans',system-ui,sans-serif;font-size:14px;font-weight:600;color:var(--text)}
+.mob-product-sub{font-family:'DM Sans',system-ui,sans-serif;font-size:12px;color:var(--text4);margin-top:1px}
+.mob-product-badge{
+  font-family:'DM Sans',system-ui,sans-serif;
+  font-size:9px;font-weight:700;padding:2px 7px;border-radius:20px;
+  background:var(--greenlt);color:var(--green);flex-shrink:0;
+}
+.mob-cta{
+  margin-top:12px;padding:14px;border-radius:10px;text-align:center;
+  background:var(--green);color:#fff;font-family:'DM Sans',system-ui,sans-serif;
+  font-size:15px;font-weight:700;display:block;
+  transition:opacity .15s;
+}
+.mob-cta:hover{opacity:.9}
+[data-theme="dark"] .mob-cta{color:#0A0E1A}
+
+@media(max-width:768px){
+  .hamburger{display:flex}
+  .nav-links{display:none!important}
+  .nav-cta{display:none!important}
+}
+@media(min-width:769px){
+  .mobile-nav{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -962,7 +1029,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
       <div class="nav-mark">S</div>
       <span class="nav-brand">Swak Soft</span>
     </a>
-    <div class="nav-links">
+        <div class="nav-links">
       <a href="/">Home</a>
       <div class="nav-dropdown" id="dd-products" onmouseenter="ddOpen(this)" onmouseleave="ddClose(this)">
         <button class="nav-drop-btn">Products</button>
@@ -979,17 +1046,25 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
             <div class="nav-submenu">
               <a href="/products/swak-data-tools" class="drop-item">
                 <div>
-                  <div class="drop-item-name">Swak Data Tools</div>
+                  <div class="drop-item-name">Swak Data Tools <span class="drop-item-badge">Live</span></div>
                   <div class="drop-item-sub">215 professional data tools</div>
                 </div>
               </a>
             </div>
           </div>
+          <div class="drop-section-label" style="margin-top:6px">Coming Soon</div>
+          <div class="drop-item" style="opacity:.5;cursor:default">
+            <div>
+              <div class="drop-item-name">More products</div>
+              <div class="drop-item-sub">In development</div>
+            </div>
+          </div>
         </div>
       </div>
-      <a href="pricing">Pricing</a>
-      <a href="download">Download</a>
-      <a href="support">Support</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/#about">About</a>
+      <a href="/support">Support</a>
+      <a href="/careers">Careers</a>
     </div>
     <div class="nav-actions">
       <button class="theme-btn" onclick="toggleTheme()" id="theme-btn" title="Toggle theme">☀️</button>
@@ -997,10 +1072,31 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
         <span class="cart-badge" id="cart-badge">0</span>
       </button>
-
+      <button class="hamburger" id="hamburger" onclick="toggleMobileNav()" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="/" class="mob-link active">Home</a>
+  <div class="mob-divider"></div>
+  <div class="mob-section">Products</div>
+  <a href="/products/swak-data-tools" class="mob-product">
+    <div>
+      <div class="mob-product-name">Swak Data Tools</div>
+      <div class="mob-product-sub">215 professional data tools for Excel</div>
+    </div>
+    <span class="mob-product-badge">Live</span>
+  </a>
+  <div class="mob-divider"></div>
+  <a href="/pricing" class="mob-link">Pricing</a>
+  <a href="/#about" class="mob-link">About</a>
+  <a href="/support" class="mob-link">Support</a>
+  <a href="/careers" class="mob-link">Careers</a>
+  <div class="mob-divider"></div>
+  <a href="/download" class="mob-cta">Download Free</a>
+</div>
+
 
 <!-- HERO -->
 <section id="hero">
@@ -1344,7 +1440,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
   <div class="container">
     <div class="sec-eye">Compatibility</div>
     <h2 class="sec-h2">System requirements</h2>
-    <p class="sec-sub">Works on Windows, Mac, and Excel on the Web.</p>
+    <p class="sec-sub">Works on Windows, macOS, Linux, and Excel on the Web.</p>
     <div class="sysreq-grid">
       <div class="sysreq-card">
         <div class="sysreq-icon">
@@ -1386,15 +1482,28 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
       </div>
       <div class="sysreq-card">
         <div class="sysreq-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg>
+        </div>
+        <div class="sysreq-title">Linux</div>
+        <ul class="sysreq-list">
+          <li>Ubuntu 20.04 LTS or later (recommended)</li>
+          <li>Debian 11+ and other major distros supported</li>
+          <li>4 GB RAM minimum, 8 GB recommended</li>
+          <li>500 MB free disk space</li>
+          <li>Install via manifest file — AppSource not required</li>
+        </ul>
+      </div>
+      <div class="sysreq-card">
+        <div class="sysreq-icon">
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"></path></svg>
         </div>
         <div class="sysreq-title">Installation</div>
         <ul class="sysreq-list">
-          <li>Install directly from Microsoft AppSource (recommended for Windows, Mac, and Microsoft 365).</li>
-          <li>For Microsoft 365 China (21Vianet) and Chinese Office editions, install via the manifest file included in the setup package from this page.</li>
+          <li>Windows &amp; Mac: install directly from Microsoft AppSource</li>
+          <li>Linux: install via the manifest file included in the setup package</li>
+          <li>Microsoft 365 China (21Vianet): install via manifest file</li>
           <li>Download Swak Runtime from swaksoft.com</li>
-          <li>No admin rights required</li>
-          <li>Install time: under 2 minutes</li>
+          <li>No admin rights required — install time under 2 minutes</li>
         </ul>
       </div>
     </div>
@@ -1433,7 +1542,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <div class="plan-save">&nbsp;</div>
         <div class="plan-desc">23 essential tools, no account required</div>
         <ul class="plan-feats">
-          <li class="n">All 215 tools (23 free forever)</li>
+          <li class="n">All 215 tools (<strong style="color:var(--green);font-weight:700">23 free forever</strong>)</li>
           <li class="y">Data Cleaning, Sort, Filter, Pivot, Transpose</li>
           <li class="y">9 UI languages</li>
           <li class="y">Standard support</li>
@@ -1616,6 +1725,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border)}
         <li><a href="/support">Help Center</a></li>
         <li><a href="/support#faq">FAQ</a></li>
         <li><a href="/support#contact">Contact Us</a></li>
+        <li><a href="/careers">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1969,6 +2079,34 @@ function sdClose(el){ el.classList.remove('open'); }
   setTimeout(tick, 1700);
 })();
 
+
+
+// ── MOBILE NAV ──
+function toggleMobileNav(){
+  var nav=document.getElementById('mobile-nav');
+  var btn=document.getElementById('hamburger');
+  var open=nav.classList.toggle('open');
+  btn.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+// close on outside click
+document.addEventListener('click',function(e){
+  var nav=document.getElementById('mobile-nav');
+  var btn=document.getElementById('hamburger');
+  if(nav&&nav.classList.contains('open')&&!nav.contains(e.target)&&!btn.contains(e.target)){
+    nav.classList.remove('open');btn.classList.remove('open');document.body.style.overflow='';
+  }
+});
+// close on resize to desktop
+window.addEventListener('resize',function(){
+  if(window.innerWidth>768){
+    var nav=document.getElementById('mobile-nav');
+    var btn=document.getElementById('hamburger');
+    if(nav){nav.classList.remove('open')}
+    if(btn){btn.classList.remove('open')}
+    document.body.style.overflow='';
+  }
+},{passive:true});
 
 </script>
 </div>
